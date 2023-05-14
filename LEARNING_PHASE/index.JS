@@ -1,7 +1,8 @@
 const { Client, GatewayIntentBits, Partials, Collection, ActivityType } = require('discord.js')
+require("dotenv").config()
 
 
-
+console.log(process.env.TUT_BOT_TOKEN)
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -14,12 +15,12 @@ const client = new Client({
   partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction]
 })
 
-console.log(client)
+
 let warning_channel_id = "1107217775509909514";
 
 
 
-client.login("MTEwNTkwMTA1NTA3MTQ5MDE2MQ.G_2IlL.yu0PSr39rP2czRpLsTzNu7oNZMJEYLXhQsQ2pU")
+client.login(process.env.tut_bot_token)
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
