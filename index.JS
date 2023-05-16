@@ -31,6 +31,7 @@ function Reactoit(msg) {
   console.log(`the message content : ${msg.content}`)
   
   const author = msg.author;
+
   const mentionString = author.toString();
   console.log(`author of the message : ${author}`)
   const channel = client.channels.cache.get(warning_channel_id);
@@ -38,13 +39,18 @@ function Reactoit(msg) {
   if (msg.content.toUpperCase().includes("NIGGA")) {
     msg.delete()
     channel.send(`<${mentionString}> Please do not use bad language !`);
+  
 
-
+  }
+  if (msg.mentions.has(client.user)) {
+    // Reply to the ping
+    msg.reply("????")
   }
   
 }
 
 
 client.on('messageCreate', Reactoit)
+
 
 
