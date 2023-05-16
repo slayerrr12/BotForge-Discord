@@ -28,10 +28,13 @@ client.on('ready', () => {
 });
 
 function Reactoit(msg) {
+  console.log(`the message content : ${msg.content}`)
+  
   const author = msg.author;
   const mentionString = author.toString();
+  console.log(`author of the message : ${author}`)
   const channel = client.channels.cache.get(warning_channel_id);
-  console.log(msg.content)
+  
   if (msg.content.includes("nigga")) {
     msg.delete()
     channel.send(`<${mentionString}> Please do not use bad language !`);
