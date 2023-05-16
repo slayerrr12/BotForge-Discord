@@ -35,7 +35,7 @@ function Reactoit(msg) {
   console.log(`author of the message : ${author}`)
   const channel = client.channels.cache.get(warning_channel_id);
   
-  if (msg.content.includes("nigga")) {
+  if (msg.content.toUpperCase().includes("NIGGA")) {
     msg.delete()
     channel.send(`<${mentionString}> Please do not use bad language !`);
 
