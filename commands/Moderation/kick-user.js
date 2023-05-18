@@ -20,6 +20,6 @@ module.exports = {
 			const reason = interaction.options.getString('reason') ?? 'No reason provided';
 	
 			await interaction.reply(`kicking ${target.username} for reason: ${reason}`);
-			await interaction.guild.members.ban(target);
+			await interaction.guild.members.kick(target);
 		},
 };
