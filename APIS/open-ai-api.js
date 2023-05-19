@@ -1,20 +1,24 @@
 const { Configuration, OpenAIApi } = require("openai");
+require("dotenv").config()
 const configuration = new Configuration({
-    apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration)
 
+const openai = new OpenAIApi(configuration);
 
-async function start() {
+async function generateQoute() {
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: "Tell me a quote.",
+    temperature: 0.4,
+    max_tokens: 1000,
+    
+  });
 
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: "Say this is a test",
-        temperature: 1,
-        max_tokens: 99,
-    });
-    return response.data.choices[0].text
+  const quote = response.data.choices[0].text.trim();
+  return quote;
 }
 
-
-console.log(start())
+module.exports = {
+    generateQoute
+}

@@ -3,8 +3,8 @@ const { Client, GatewayIntentBits, Partials, Collection, ActivityType, Constants
 const path = require("path")
 const fs = require("fs")
 require("dotenv").config()
-const audioRecorder = require('./audio-recoder.js');
-console.log(audioRecorder);
+
+
 const { interaction } = Constants;
 
 
