@@ -3,6 +3,8 @@ const { Client, GatewayIntentBits, Partials, Collection, ActivityType, Constants
 const path = require("path")
 const fs = require("fs")
 require("dotenv").config()
+const audioRecorder = require('./audio-recoder.js');
+console.log(audioRecorder);
 const { interaction } = Constants;
 
 
@@ -52,7 +54,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
-
 //message event handler function
 function Reactoit(msg) {
   console.log(`the message content : ${msg.content}`)
@@ -74,6 +75,7 @@ function Reactoit(msg) {
     // Reply to the ping
     msg.reply("?")
   }
+  
 
 }
 
