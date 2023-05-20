@@ -42,4 +42,3 @@ Contributions are welcome! If you find any issues or would like to suggest enhan
 License
 This project is licensed under the ISC License. See the LICENSE file for more information.
 
-Feel free to customize and enhance the README file as per your requirements. Make sure to update the sections with relevant information about your bot and its functionalities.
