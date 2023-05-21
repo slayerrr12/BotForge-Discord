@@ -20,7 +20,7 @@ To get started with BotForge-Discord, follow these steps:
 4. Run the bot: `node index.js`
 5. Invite the bot to your server using the provided OAuth2 link.
 
-For more detailed instructions and configuration options, refer to the [Documentation](docs/README.md).
+
 
 ## Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or would like to add new features, please submit a pull request. Make sure to follow the [Contributing Guidelines](CONTRIBUTING.md) when contributing to this project.
