@@ -4,11 +4,18 @@ const emojiMap = new Map([
     ['world', '🌍'],
     ['awesome', '😎'],
     ['chat', '💬'],
+    ['happy', '😄'],
+    ['love', '❤️'],
+    ['cat', '🐱'],
+    ['dog', '🐶'],
+    ['pizza', '🍕'],
+    ['sun', '☀️'],
+    ['moon', '🌙'],
     // Add more word-emoji mappings as needed
   ]);
   
 
-
+//the emojifying function
   function emojifying(message) {
     const words = message.split(' ');
     const emojifiedWords = words.map((word) => {
@@ -28,7 +35,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('emojify')
-        .setDescription('Transforms text into a string of emojis for playful conversations')
+        .setDescription('emojifies your message so that your conversation are more lively')
         .addStringOption(option =>
             option
                 .setName('message')
