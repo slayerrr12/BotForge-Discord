@@ -1,4 +1,4 @@
-Sure! Here's a generated README file for the BotForge-Discord repository:
+
 
 # BotForge-Discord
 
@@ -20,10 +20,49 @@ To get started with BotForge-Discord, follow these steps:
 4. Run the bot: `node index.js`
 5. Invite the bot to your server using the provided OAuth2 link.
 
+## Run Locally
 
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the project
+
+```bash
+  node index.js
+```
+
+## Tech Stack
+Node , Discord.js , JSON , APIS
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`OPENAI_API_KEY`
+
+`TUT_BOT_TOKEN`
 
 ## Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or would like to add new features, please submit a pull request. Make sure to follow the [Contributing Guidelines](CONTRIBUTING.md) when contributing to this project.
+## Authors
+
+- [@slayerrr12](https://github.com/slayerrr12)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
