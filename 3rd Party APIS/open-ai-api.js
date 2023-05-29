@@ -5,11 +5,11 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-
+const prompt = `Tell me a quote (${new Date().toISOString()})`;
 async function generateQoute() {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: "Tell me a quote.",
+    prompt: prompt,
     temperature: 0.4,
     max_tokens: 1000,
     

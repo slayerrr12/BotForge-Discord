@@ -82,29 +82,40 @@ function Reactoit(msg) {
 //message event handler
 client.on('messageCreate', Reactoit)
 
-//slash command handler
-client.on('interactionCreate', async interaction => {
-  //if the interaction is not a chatinput i.e a slash command then the function returns
-  if (!interaction.isChatInputCommand()) return;
-  //the command object is loaded from the commands collection by matching the command type from command name property
-  const command = interaction.client.commands.get(interaction.commandName);
-  //if the object is empty then the error is logged into the console
-  if (!command) {
-    console.error(`No command matching ${interaction.commandName} was found.`);
-    return;
-  }
-  //if it is found then our async command logic is executed
+// slash command handler
+client.on('interactionCreate', async (interaction) => {
   try {
+    // If the interaction is not a chat input (slash command), return
+    if (!interaction.isCommand()) return;
+
+    // Get the command object from the commands collection
+    const command = client.commands.get(interaction.commandName);
+
+    // If the command is not found, log an error and return
+    if (!command) {
+      console.error(`No command matching ${interaction.commandName} was found.`);
+      return;
+    }
+
+    // Execute the command's logic
     await command.execute(interaction);
   } catch (error) {
     console.error(error);
-    if (interaction.replied || interaction.deferred) {
-      await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
-    } else {
-      await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+
+    try {
+      // If the interaction is already replied to or deferred, follow up with an error message
+      if (interaction.replied || interaction.deferred) {
+        await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
+      } else {
+        // If the interaction hasn't been replied to or deferred yet, reply with an error message
+        await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+      }
+    } catch (followUpError) {
+      console.error('Failed to send an error message:', followUpError);
     }
   }
 });
+
 
 
 
