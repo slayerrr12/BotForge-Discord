@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const quote = require('../../APIS/open-ai-api');
+const quote = require('../../3rd Party APIS/open-ai-api');
 
 
 
