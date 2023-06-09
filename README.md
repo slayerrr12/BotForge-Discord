@@ -2,7 +2,7 @@
 
 # BotForge-Discord
 
-BotForge-Discord is a very powerful Discord bot designed to enhance your server's functionalities and provide an interactive and engaging experience for your community.
+BotForge-Discord is a very powerful and efficient Discord bot designed to enhance your server's functionalities and provide an interactive and engaging experience for your community.
 
 ## Features
 
