@@ -86,7 +86,7 @@ client.on('messageCreate', Reactoit)
 client.on('interactionCreate', async (interaction) => {
   try {
     // If the interaction is not a chat input (slash command), return
-    if (!interaction.isCommand()) return;
+    if (!interaction.isCommand() && !interaction.isButton() && !interaction.isSelectMenuInteraction) return;
 
     // Get the command object from the commands collection
     const command = client.commands.get(interaction.commandName);
