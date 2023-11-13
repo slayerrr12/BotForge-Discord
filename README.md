@@ -6,6 +6,7 @@ BotForge-Discord is a very powerful and efficient Discord bot designed to enhanc
 
 ## Features
 
+
 - **Command Framework**: Built using a flexible and extensible command framework, making it easy to add new commands and functionalities.
 - **Moderation Tools**: Various moderation tools are available to help you manage your server effectively and keep it safe.
 - **Easy Integration**: BotForge-Discord is designed to be easy to integrate into your Discord server, with clear setup instructions and comprehensive documentation.
